@@ -19,7 +19,7 @@ router.post("/", async (req, res) => {
         category,
         stock,
         imageUrl,
-        variants, // Sequelize هيعمل insert في جدول variant
+        variants, 
       },
       {
         include: [{ model: Variant, as: "variants" }],

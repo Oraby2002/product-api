@@ -6,6 +6,21 @@
 - Sequelize ORM
 - PostgreSQL
 
+
+
+## Environment Variables
+Create a `.env` file in the root of the backend project with the following variables:
+
+DB_NAME=product
+DB_USER=postgres
+DB_PASSWORD=123
+DB_HOST=localhost
+DB_PORT=5432
+DB_SCHEMA=public
+PORT=4000
+ 
+> Make sure to add `.env` to `.gitignore` to avoid committing sensitive data.
+
 ## How to Run
 ```bash
 npm install
@@ -52,6 +67,6 @@ Notes
 
 Although the task suggested Prisma, this project was implemented using Sequelize ORM with PostgreSQL.
 
-The server runs locally on http://localhost:4000.
-
 API tested using Postman.
+
+The backend uses environment variables from .env for database configuration.
