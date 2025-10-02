@@ -19,5 +19,5 @@ sequelize
   .catch((err) => console.error("DB sync error:", err));
 
 app.listen(4000, () => {
-  console.log("Server running on http://localhost:4000");
+  console.log(`Server running on ${process.env.DB_HOST || 'localhost'}:4000`);
 });

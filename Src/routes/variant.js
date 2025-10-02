@@ -36,7 +36,7 @@ router.get("/by-product/:productName", async (req, res) => {
   try {
     const productName = req.params.productName;
 
-    // الأول ندور على الـ product بالاسم
+    
     const product = await Product.findOne({
       where: { name: productName },
     });
@@ -45,7 +45,6 @@ router.get("/by-product/:productName", async (req, res) => {
       return res.status(404).json({ error: "Product not found" });
     }
 
-    // بعد كده نجيب الـ variants الخاصة بيه
     const variants = await Variant.findAll({
       where: { productId: product.id },
     });
